@@ -1,3 +1,4 @@
+
 create table Cars (
 	ID int not null identity(1,1) primary key,
 	Make nvarchar(30) not null,
@@ -32,3 +33,7 @@ insert cars
 (make, model, trim, year, issedan, purchaseprice)
 values
 ('Kawasaki', 'Ninja 650R', 'None', '2013', 0, 8400)
+
+update cars set
+	trim=null
+		where make= 'yamaha' or make='honda' or make='kawasaki'
